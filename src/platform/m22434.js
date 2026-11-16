@@ -1267,7 +1267,7 @@ function as({ onReveal: a }) {
           }),
           (0, n.jsx)('p', { style: S(3.7, 0.5, u), children: '2026' }),
           (0, n.jsx)(G, { w: 11, gap: 1.8, animate: !1 }),
-          (0, n.jsx)('p', { style: S(3, 0.42, y), children: 'Sunday' }),
+          (0, n.jsx)('p', { style: S(3, 0.42, y), children: 'Sunday · Hastmelap' }),
           (0, n.jsx)('p', {
             style: {
               fontFamily: j,
@@ -1278,7 +1278,7 @@ function as({ onReveal: a }) {
               color: u,
               margin: `${w(0.4)} 0 0`,
             },
-            children: 'Hastmelap 6:30 PM',
+            children: '6:30 PM',
           }),
         ],
       }),
