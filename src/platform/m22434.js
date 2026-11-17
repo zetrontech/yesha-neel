@@ -893,7 +893,7 @@ function ai({ onBegin: a, onDone: e }) {
                   alt: 'Y & N monogram',
                   className: 'aa-cin',
                   draggable: !1,
-                  style: { ...$(1.1), width: w(34), height: 'auto', display: 'block', margin: '0 auto' },
+                  style: { ...$(1.1), width: w(38), height: 'auto', display: 'block', margin: '0 auto' },
                 }),
                 (0, n.jsx)('p', {
                   className: 'aa-cin',
@@ -1536,7 +1536,7 @@ function af({ delay: a }) {
     alt: 'Y & N monogram',
     className: 'aa-r',
     draggable: !1,
-    style: { ...$(a), width: w(44), height: 'auto', display: 'block' },
+    style: { ...$(a), width: w(46), height: 'auto', display: 'block' },
   })
 }
 export const WEDDING_ID = d
