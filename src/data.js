@@ -1,14 +1,14 @@
 // Yesha & Neel — all invitation copy lives here (plus the JSX in platform/m22434.js).
-// Exact places, looked up on Google Maps web (place pages + coordinates).
-const place = (name, lat, lng, data) =>
-  `https://www.google.com/maps/place/${name}/@${lat},${lng},17z/data=${data}!8m2!3d${lat}!4d${lng}`
-const pin = (lat, lng) => `https://maps.google.com/?q=${lat},${lng}` // short link for QR codes
-export const MAP_HALL = place('Sheth+Shree+Manilal+Chunilal+Visha+Oshwal+Jain+Hostel', 22.5525392, 72.9321729, '!3m1!4b1!4m6!3m5!1s0x395e4e7716c51e79:0xe88977b210ca4f25')
-export const MAP_AVSAR = place('Avsar+Party+Plot+%26+Banquet', 22.5547237, 72.9855661, '!3m1!4b1!4m6!3m5!1s0x395e4951a22769d9:0xa1b9a0b1f286040e')
-export const MAP_RECEPTION = place("Praveg's+Grand+Eulogia", 23.0434587, 72.4812578, '!4m9!3m8!1s0x395e9bb086af3af7:0xff6557a8cf0b926e!5m2!4m1!1i2')
-export const QR_HALL = pin(22.5525392, 72.9321729)
-export const QR_AVSAR = pin(22.5547237, 72.9855661)
-export const QR_RECEPTION = pin(23.0434587, 72.4812578)
+// Exact venue pins (same places as the client's share links: Avsar Party Plot & Banquet,
+// Sheth Shree Manilal Chunilal Visha Oshwal Jain Hostel hall, Praveg's Grand Eulogia).
+// "dir" links open the Google Maps app straight into directions to the venue.
+const dir = (lat, lng) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`
+export const MAP_HALL = dir(22.5525392, 72.9321729)
+export const MAP_AVSAR = dir(22.5547237, 72.9855661)
+export const MAP_RECEPTION = dir(23.0434587, 72.4812578)
+export const QR_HALL = MAP_HALL
+export const QR_AVSAR = MAP_AVSAR
+export const QR_RECEPTION = MAP_RECEPTION
 
 export const EVENTS = [
   {
