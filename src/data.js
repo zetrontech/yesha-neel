@@ -5,8 +5,10 @@
 const dir = (lat, lng) => `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`
 export const MAP_HALL = dir(22.5525392, 72.9321729)
 export const MAP_AVSAR = dir(22.5547237, 72.9855661)
-// Reception: the client's own Google share link (their exact pin)
-export const MAP_RECEPTION = 'https://share.google/GzXrHNXe3X7TGiIjR'
+// Reception: directions to the Praveg's Grand Eulogia listing itself (same place as the client's Google panel / Directions button)
+export const MAP_RECEPTION =
+  'https://www.google.com/maps/dir/?api=1&destination=' +
+  encodeURIComponent("Praveg's Grand Eulogia, Sindhu Bhavan Road, Thaltej, Ahmedabad").replace(/'/g, '%27')
 export const QR_HALL = MAP_HALL
 export const QR_AVSAR = MAP_AVSAR
 export const QR_RECEPTION = MAP_RECEPTION
