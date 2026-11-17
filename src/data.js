@@ -1,8 +1,9 @@
 // Yesha & Neel — all invitation copy lives here (plus the JSX in platform/m22434.js).
-export const MAP_HALL = 'https://maps.app.goo.gl/WY5mCa8u9aD4GBDZ9'
-export const MAP_AVSAR = 'https://maps.app.goo.gl/ZZaXgHGB8YwPiD4P7'
-const REC_ADDR = "Praveg's Grand Eulogia, Sindhu Bhavan Road, Near Taj Skyline, Near S.G. Highway, Thaltej, Ahmedabad 380058"
-export const MAP_RECEPTION = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(REC_ADDR)
+// Official Google Maps URL scheme (opens the Maps app / maps site directly, no short-link redirect page).
+const mapUrl = (q) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q)
+export const MAP_HALL = mapUrl('Shree Visha Oswal Hall, Vallabh Vidyanagar, Anand, Gujarat')
+export const MAP_AVSAR = mapUrl('Avsar Party Plot, Near Chikhodra Crossing, Chikhodra Road, Anand 388001')
+export const MAP_RECEPTION = mapUrl("Praveg's Grand Eulogia, Sindhu Bhavan Road, Thaltej, Ahmedabad 380058")
 
 export const EVENTS = [
   {

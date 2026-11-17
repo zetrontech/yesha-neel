@@ -33,8 +33,8 @@ let d = 'ec7ef466-cbca-4b97-9839-642ca99c0e75',
     details: 'Wedding of Yesha & Neel — Hastmelap 6:30 PM, Pre-Sunset Dinner 5:00 PM, Dinner 7:00 PM. Mehndi & Sangeet 27 Nov, Reception 30 Nov.',
     uid: `${d}-main@zetron.tech`,
   },
-  u = '#4a3a2e',
-  y = '#4d392b',
+  u = '#6b1820',
+  y = '#8c2b2b',
   x = '#7a1f24',
   b = '#a07c45',
   v = '#efe4d6',
@@ -207,6 +207,7 @@ let N = (a) => Math.round(100 * a) / 100,
 .aa-break .aa-lid-copy{opacity:0}
 .aa-pocket-copy{position:absolute;left:50%;top:54.4%;transform:translateX(-50%);width:62%;z-index:4;text-align:center;pointer-events:none}
 .aa-tap{transition:opacity .3s ease}
+.aa-taptop{position:absolute;left:50%;top:41%;transform:translate(-50%,-100%);z-index:7;text-align:center;pointer-events:none;white-space:nowrap}
 .aa-break .aa-tap{opacity:0}
 .aa-cin{opacity:0;animation:aa-rise 1.1s cubic-bezier(.2,.7,.2,1) var(--d,0s) both}
 .aa-pulse{animation:aa-pulse 2.4s ease-in-out infinite}
@@ -248,7 +249,7 @@ let N = (a) => Math.round(100 * a) / 100,
 .aa-flakes{position:absolute;inset:0;pointer-events:none;z-index:6;overflow:visible}
 .aa-flake{position:absolute;clip-path:polygon(0 18%,100% 0,72% 100%);background:linear-gradient(135deg,#f8e7b4,#c49c56 60%,#8f6d38);animation:aa-flake 1.25s cubic-bezier(.2,.6,.4,1) forwards}
 @keyframes aa-flake{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rz))}}
-.aa-foiltext{background:linear-gradient(100deg,#7d5f2e 0%,#b8935a 20%,#ecd6a2 36%,#a8834a 52%,#7d5f2e 68%,#c9a567 84%,#8a6a36 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:aa-foilsh 5s linear infinite}
+.aa-foiltext{background:linear-gradient(100deg,#7a1f24 0%,#b8935a 20%,#ecd6a2 36%,#a8834a 52%,#7a1f24 68%,#c9a567 84%,#8a6a36 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:aa-foilsh 5s linear infinite}
 @keyframes aa-foilsh{from{background-position:120% 0}to{background-position:-110% 0}}
 
 /* Countdown tab */
@@ -272,7 +273,7 @@ let N = (a) => Math.round(100 * a) / 100,
 /* RSVP */
 .aa-lbl{font-family:${j};font-weight:500;font-size:${w(2.35)};letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:${x};margin:0 0 ${w(1.2)}}
 .aa-input{width:100%;border:0;border-bottom:1px solid rgba(160,124,69,.7);background:transparent;text-align:center;font-family:${j};font-weight:500;font-size:max(16px,${w(4.6)});color:${u};padding:${w(1.2)} 0;outline:none;border-radius:0;transition:border-color .25s}
-.aa-input::placeholder{color:rgba(107,86,70,.55);font-style:italic;font-weight:400}
+.aa-input::placeholder{color:rgba(122,31,36,.6);font-style:italic;font-weight:400}
 .aa-input:focus{border-bottom-color:${x}}
 .aa-choice{flex:1;padding:${w(2.2)} 0;border:1px solid rgba(160,124,69,.7);border-radius:999px;background:rgba(250,244,235,.6);font-family:${j};font-weight:500;font-size:${w(2.9)};letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:${u};cursor:pointer;transition:all .3s cubic-bezier(.3,1.4,.5,1)}
 .aa-choice.on{background:linear-gradient(135deg,#8d6b35,#b8935a);color:#fff9ee;border-color:transparent;transform:scale(1.04);box-shadow:0 6px 16px rgba(120,90,50,.28)}
@@ -282,7 +283,7 @@ let N = (a) => Math.round(100 * a) / 100,
 .aa-grow{animation:aa-grow .55s cubic-bezier(.2,.8,.2,1) both}
 @keyframes aa-grow{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 .aa-send{background:linear-gradient(135deg,#8d6b35,#b8935a);color:#fff9ee;border-color:transparent;box-shadow:0 8px 20px rgba(120,90,50,.26)}
-.aa-send:hover{background:linear-gradient(135deg,#7d5f2e,#a8834a)}
+.aa-send:hover{background:linear-gradient(135deg,#7a1f24,#a8834a)}
 .aa-send:disabled{opacity:.7;cursor:progress}
 .aa-burst{position:absolute;left:50%;top:40%;width:0;height:0;pointer-events:none}
 .aa-burst span{position:absolute;width:${w(3)};height:${w(4.2)};animation:aa-burst 1.6s cubic-bezier(.15,.7,.3,1) var(--dl) forwards;opacity:0}
@@ -314,7 +315,7 @@ function B({
       ...$(r),
       fontFamily: j,
       fontWeight: s,
-      fontSize: w(Math.max(1.3 * e, 3.4)),
+      fontSize: w(Math.max(1.3 * e, 3.4) + 0.8),
       letterSpacing: `${0.8 * t}em`,
       paddingLeft: `${0.8 * t}em`,
       textTransform: 'uppercase',
@@ -342,7 +343,7 @@ function H({
     style: {
       fontFamily: j,
       fontWeight: o,
-      fontSize: w(e),
+      fontSize: w(e + 0.8),
       letterSpacing: `${r}em`,
       paddingLeft: `${r}em`,
       color: s,
@@ -378,7 +379,7 @@ function Y({ text: a, size: e = 4.6, delay: t = 0, step: i = 0.12, color: r = y,
       fontFamily: j,
       fontStyle: 'italic',
       fontWeight: 500,
-      fontSize: w(1.12 * e),
+      fontSize: w(1.12 * e + 0.8),
       color: r,
       margin: 0,
       lineHeight: 1.55,
@@ -407,7 +408,7 @@ function X({ children: a, size: e = 8, delay: t = 0, color: i = '#7a1f24', style
       ...$(t),
       fontFamily: k,
       fontWeight: 400,
-      fontSize: w(1.1 * e),
+      fontSize: w(1.1 * e + 0.8),
       color: i,
       margin: 0,
       lineHeight: 1.28,
@@ -426,7 +427,7 @@ function O({ children: a, size: e = 4.3, delay: t = 0, color: i = y, style: r })
       fontFamily: j,
       fontStyle: 'italic',
       fontWeight: 500,
-      fontSize: w(Math.max(1.16 * e, 4)),
+      fontSize: w(Math.max(1.16 * e, 4) + 0.8),
       color: i,
       margin: 0,
       lineHeight: 1.5,
@@ -668,7 +669,7 @@ function aa() {
                 'aria-hidden': !0,
                 children: (0, n.jsx)('path', {
                   d: 'M1 6Q6 1 12 6Q18 1 23 6',
-                  stroke: '#7e6b58',
+                  stroke: '#8c2b2b',
                   strokeWidth: '1.4',
                   fill: 'none',
                   strokeLinecap: 'round',
@@ -717,7 +718,7 @@ function ae() {
                 'aria-hidden': !0,
                 children: (0, n.jsx)('path', {
                   d: 'M1 6Q6 1 12 6Q18 1 23 6',
-                  stroke: '#7e6b58',
+                  stroke: '#8c2b2b',
                   strokeWidth: '1.4',
                   fill: 'none',
                   strokeLinecap: 'round',
@@ -847,8 +848,8 @@ function ai({ onBegin: a, onDone: e }) {
       .join(' '),
     d = (a, e, t) => ({
       fontFamily: j,
-      fontWeight: 500,
-      fontSize: w(a),
+      fontWeight: 700,
+      fontSize: w(a + 0.8),
       letterSpacing: `${e}em`,
       paddingLeft: `${e}em`,
       textTransform: 'uppercase',
@@ -907,28 +908,8 @@ function ai({ onBegin: a, onDone: e }) {
                 }),
                 (0, n.jsx)('p', {
                   className: 'aa-cin',
-                  style: { ...$(1.55), ...d(3.9, 0.3, y) },
+                  style: { ...$(1.55), ...d(2.7, 0.2, u), whiteSpace: 'nowrap' },
                   children: '27 – 30 November 2026',
-                }),
-                (0, n.jsx)('div', {
-                  className: 'aa-tap',
-                  style: { marginTop: w(4.4) },
-                  children: (0, n.jsxs)('div', {
-                    className: 'aa-cin',
-                    style: $(2.3),
-                    children: [
-                      (0, n.jsx)('p', {
-                        className: 'aa-pulse',
-                        style: d(3.5, 0.4, x),
-                        children: 'Tap to open',
-                      }),
-                      (0, n.jsx)('div', {
-                        className: 'aa-bob',
-                        style: { fontSize: w(3), color: b, lineHeight: 1, marginTop: w(0.6) },
-                        children: '✦',
-                      }),
-                    ],
-                  }),
                 }),
               ],
             }),
@@ -963,6 +944,18 @@ function ai({ onBegin: a, onDone: e }) {
                   style: { clipPath: T, WebkitClipPath: T },
                 }),
               ],
+            }),
+            (0, n.jsx)('div', {
+              className: 'aa-tap aa-taptop',
+              'aria-hidden': !0,
+              children: (0, n.jsxs)('div', {
+                className: 'aa-cin',
+                style: $(2.3),
+                children: [
+                  (0, n.jsx)('p', { className: 'aa-pulse', style: { ...d(4.6, 0.3, x), lineHeight: 1.4 }, children: 'Tap to open' }),
+                  (0, n.jsx)('div', { className: 'aa-bob', style: { fontSize: w(6), color: x, lineHeight: 1, marginTop: w(0.2) }, children: '▾' }),
+                ],
+              }),
             }),
             (0, n.jsx)('div', {
               className: 'aa-seal',
@@ -1071,7 +1064,7 @@ function as({ onReveal: a }) {
             a.clip())
           let n = a.createLinearGradient(0, 0, e, t)
           ;([
-            [0, '#7d5f2e'],
+            [0, '#7a1f24'],
             [0.18, '#c9a567'],
             [0.32, '#f3dfaa'],
             [0.46, '#b48c4c'],
@@ -1213,8 +1206,8 @@ function as({ onReveal: a }) {
     },
     S = (a, e, t) => ({
       fontFamily: j,
-      fontWeight: 500,
-      fontSize: w(a),
+      fontWeight: 700,
+      fontSize: w(a - 0.3),
       letterSpacing: `${e}em`,
       paddingLeft: `${e}em`,
       textTransform: 'uppercase',
@@ -1239,7 +1232,7 @@ function as({ onReveal: a }) {
         className: `aa-dateblock${o ? ' on' : ''}`,
         'aria-hidden': !o,
         children: [
-          (0, n.jsx)('p', { style: S(3.8, 0.4, u), children: 'November' }),
+          (0, n.jsx)('p', { style: S(3.4, 0.36, u), children: 'November' }),
           (0, n.jsx)('p', {
             className: 'aa-foiltext',
             style: {
@@ -1251,7 +1244,7 @@ function as({ onReveal: a }) {
             },
             children: '29',
           }),
-          (0, n.jsx)('p', { style: S(3.8, 0.4, u), children: '2026' }),
+          (0, n.jsx)('p', { style: S(3.4, 0.36, u), children: '2026' }),
           (0, n.jsx)(G, { w: 11, gap: 1.8, animate: !1 }),
           (0, n.jsx)('p', { style: S(3.9, 0.3, y), children: 'Sunday · Hastmelap' }),
           (0, n.jsx)('p', {
@@ -1328,7 +1321,7 @@ function as({ onReveal: a }) {
             'aria-hidden': !0,
             children: (0, n.jsx)('path', {
               fill: '#fffaf0',
-              stroke: '#7d5f2e',
+              stroke: '#7a1f24',
               strokeWidth: '.6',
               d: 'M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z',
             }),
@@ -1550,12 +1543,13 @@ function EV({ ev: a, art: e, flip: t }) {
     flip: t,
     label: a.title,
     children: (0, n.jsxs)(J, {
-      top: 8,
-      bottom: 7,
+      top: a.rows.length > 3 ? 5.5 : 8,
+      bottom: a.rows.length > 3 ? 6 : 7,
       wash: !0,
       children: [
-        (0, n.jsx)(B, { size: 2.6, track: 0.34, color: x, delay: r(), children: a.date }),
-        (0, n.jsx)(X, { size: 9, delay: r(), style: { marginTop: w(1) }, children: a.title }),
+        (0, n.jsx)(B, { size: 3.2, track: 0.22, weight: 800, color: x, delay: r(), children: a.date.split(', ')[0] }),
+        (0, n.jsx)(B, { size: 3.2, track: 0.2, weight: 800, color: x, delay: r(), style: { marginTop: w(0.2) }, children: a.date.split(', ')[1] }),
+        (0, n.jsx)(X, { size: 8.6, delay: r(), style: { marginTop: w(1), WebkitTextStroke: '1.1px #7a1f24', paintOrder: 'stroke fill' }, children: a.title }),
         a.sub ? (0, n.jsx)(B, { size: 2.8, track: 0.5, color: y, delay: r(), children: a.sub }) : null,
         (0, n.jsx)(G, { w: 15, delay: r(), gap: 2.6 }),
         (0, n.jsx)('div', {
@@ -1573,13 +1567,13 @@ function EV({ ev: a, art: e, flip: t }) {
                       justifyContent: 'space-between',
                       alignItems: 'baseline',
                       gap: w(3),
-                      padding: `${w(1.1)} 0`,
+                      padding: `${w(a.rows.length > 3 ? 0.7 : 1.1)} 0`,
                       borderBottom: '1px dotted rgba(122,31,36,.45)',
                       fontFamily: j,
                     },
                     children: [
-                      (0, n.jsx)('span', { style: { fontSize: w(3.4), letterSpacing: '.14em', textTransform: 'uppercase', fontWeight: 700, color: x, textAlign: 'left' }, children: l }),
-                      (0, n.jsx)('span', { style: { fontSize: w(4.6), fontWeight: 600, fontStyle: 'italic', color: u, whiteSpace: 'nowrap' }, children: v }),
+                      (0, n.jsx)('span', { style: { fontSize: w(3.5), letterSpacing: '.05em', textTransform: 'uppercase', fontWeight: 800, color: x, textAlign: 'left' }, children: l }),
+                      (0, n.jsx)('span', { style: { fontSize: w(5), fontWeight: 700, fontStyle: 'italic', color: u, whiteSpace: 'nowrap' }, children: v }),
                     ],
                   }),
                   nm
@@ -1587,8 +1581,8 @@ function EV({ ev: a, art: e, flip: t }) {
                         className: 'aa-r',
                         style: { ...$(r()), textAlign: 'center', padding: `${w(2)} 0 ${w(1)}`, fontFamily: j },
                         children: [
-                          (0, n.jsx)('div', { style: { fontSize: w(4.6), fontWeight: 700, color: x, letterSpacing: '.04em' }, children: '– Mosalu By –' }),
-                          (0, n.jsx)('div', { style: { fontSize: w(4.4), fontWeight: 700, color: u, lineHeight: 1.3, marginTop: w(0.6) }, children: nm }),
+                          (0, n.jsx)('div', { style: { fontSize: w(5.4), fontWeight: 800, color: x, letterSpacing: '.04em' }, children: '– Mosalu By –' }),
+                          (0, n.jsx)('div', { style: { fontSize: w(4.6), fontWeight: 800, color: u, lineHeight: 1.25, marginTop: w(0.6) }, children: nm }),
                         ],
                       })
                     : null,
@@ -1604,7 +1598,7 @@ function EV({ ev: a, art: e, flip: t }) {
           (0, n.jsx)(H, { text: l, size: 4.3, delay: r(), step: 0.03, track: 0.1, style: { marginTop: w(0.8) }, children: null }, l),
         ),
         a.addr
-          ? (0, n.jsx)(O, { size: 3.3, delay: r(), style: { marginTop: w(0.8), maxWidth: w(70), lineHeight: 1.45 }, children: a.addr })
+          ? (0, n.jsx)(O, { size: 3.3, delay: r(), style: { marginTop: w(0.8), maxWidth: w(82), lineHeight: 1.4 }, children: a.addr })
           : null,
         a.qr
           ? (0, n.jsxs)('div', {
@@ -1616,7 +1610,7 @@ function EV({ ev: a, art: e, flip: t }) {
                   target: '_blank',
                   rel: 'noopener noreferrer',
                   'aria-label': `Open ${a.title} venue on the map`,
-                  style: { display: 'block', width: w(20), height: w(20) },
+                  style: { display: 'block', width: w(a.rows.length > 3 ? 20 : 23), height: w(a.rows.length > 3 ? 20 : 23) },
                   children: (0, n.jsx)(QrCode, { url: a.map }),
                 }),
                 (0, n.jsx)(B, { size: 2, track: 0.34, color: y, delay: 0, style: { animation: 'none', opacity: 1 }, children: 'Scan for location' }),
@@ -1667,20 +1661,39 @@ export default function () {
     }, [a]),
     (0, s.useEffect)(() => {
       if (!a) return
-      let e = !1,
-        t = () => {
-          e = !0
+      let idle = Date.now(),
+        wake = () => {
+          idle = Date.now()
         },
-        i = ['wheel', 'touchstart', 'keydown', 'pointerdown']
-      i.forEach((a) => window.addEventListener(a, t, { passive: !0, capture: !0 }))
-      let r = window.setTimeout(() => {
-        let a = document.body.scrollTop || document.documentElement.scrollTop || window.scrollY
-        !e &&
-          a < 40 &&
-          document.getElementById('aa-date')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }, 8500)
+        evs = ['wheel', 'touchstart', 'touchmove', 'keydown', 'pointerdown', 'mousedown']
+      evs.forEach((x) => window.addEventListener(x, wake, { passive: !0, capture: !0 }))
+      let pages = () => Array.from(document.querySelectorAll('[data-aa-page]')),
+        tick = () => {
+          if (document.hidden) return
+          let ps = pages()
+          if (!ps.length) return
+          let cur = 0,
+            best = 1 / 0
+          ps.forEach((el, i) => {
+            let d = Math.abs(el.getBoundingClientRect().top)
+            d < best && ((best = d), (cur = i))
+          })
+          let el = ps[cur],
+            next = ps[cur + 1]
+          if (!next || best > 40) return
+          // wait for the date to be scratched before moving on
+          if ('aa-date' === el.id && !document.querySelector('.aa-foilc.gone')) return
+          let dwell = 'aa-reveal' === el.id ? 8500 : 'aa-manglik' === el.id ? 9500 : 7500
+          ps.forEach((x, i) => i !== cur && delete x.dataset.aaSince)
+          let since = Number(el.dataset.aaSince || 0)
+          if (!since || idle > since) return void (el.dataset.aaSince = String(Math.max(Date.now(), idle)))
+          if (Date.now() - since < dwell) return
+          el.dataset.aaSince = ''
+          next.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        },
+        timer = window.setInterval(tick, 1000)
       return () => {
-        ;(clearTimeout(r), i.forEach((a) => window.removeEventListener(a, t, { capture: !0 })))
+        ;(clearInterval(timer), evs.forEach((x) => window.removeEventListener(x, wake, { capture: !0 })))
       }
     }, [a]))
   let r = (0, s.useCallback)(() => {
@@ -1712,37 +1725,34 @@ export default function () {
                 top: 22,
                 bottom: 11,
                 children: [
-                  (0, n.jsx)(B, { size: 2.7, track: 0.2, color: x, delay: 0.2, children: '|| Shree Shantinathaya Namah ||' }),
+                  (0, n.jsx)(B, { size: 2.7, track: 0.1, color: x, weight: 800, delay: 0.2, style: { fontSize: w(3.5) }, children: '|| Shree Shantinathaya Namah ||' }),
                   (0, n.jsx)(G, { w: 16, delay: 0.6, gap: 2.8 }),
                   (0, n.jsx)(Y, { text: 'Lt. Smt. Kokilaben Shah &', size: 4.3, delay: 0.9 }),
                   (0, n.jsx)(Y, { text: 'Lt. Shri Chandrakant Shah', size: 4.3, delay: 1.6 }),
-                  (0, n.jsxs)(B, {
-                    size: 2.5,
-                    track: 0.26,
+                  (0, n.jsxs)(O, {
+                    size: 4,
                     color: y,
                     delay: 2.4,
-                    style: { marginTop: w(1.8), lineHeight: 1.9 },
+                    style: { marginTop: w(1.8), lineHeight: 1.55, fontSize: w(4.5), fontWeight: 600 },
                     children: ['Request the honour of your presence', (0, n.jsx)('br', {}), 'at the wedding of their granddaughter'],
                   }),
                   (0, n.jsx)('div', { style: { height: w(3) } }),
                   (0, n.jsx)(H, { text: 'Yesha', size: 9.4, delay: 2.9 }),
-                  (0, n.jsxs)(B, {
-                    size: 2.4,
-                    track: 0.2,
+                  (0, n.jsx)(O, {
+                    size: 4,
                     color: y,
                     delay: 3.3,
-                    style: { marginTop: w(0.6), lineHeight: 1.8 },
-                    children: ['D/o Mrs. Dipika & Mr. Arnik Shah'],
+                    style: { marginTop: w(0.6), fontSize: w(4.6), fontWeight: 600 },
+                    children: 'D/o Mrs. Dipika & Mr. Arnik Shah',
                   }),
                   (0, n.jsx)(X, { size: 8.6, delay: 3.7, style: { margin: `${w(1.2)} 0` }, children: 'weds' }),
                   (0, n.jsx)(H, { text: 'Neel', size: 9.4, delay: 4.1 }),
-                  (0, n.jsxs)(B, {
-                    size: 2.4,
-                    track: 0.2,
+                  (0, n.jsx)(O, {
+                    size: 4,
                     color: y,
                     delay: 4.5,
-                    style: { marginTop: w(0.6), lineHeight: 1.8 },
-                    children: ['S/o Parulben & Lt. Virenbhai Shah'],
+                    style: { marginTop: w(0.6), fontSize: w(4.6), fontWeight: 600 },
+                    children: 'S/o Parulben & Lt. Virenbhai Shah',
                   }),
                 ],
               }),
@@ -1900,7 +1910,7 @@ export default function () {
             }),
           ],
         }),
-        a && (0, n.jsx)(c.ScrollIndicator, { color: x, bottom: 18 }),
+        a && (0, n.jsx)(c.ScrollIndicator, { color: x, bottom: 14 }),
       ],
     }),
   })

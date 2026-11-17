@@ -2793,9 +2793,14 @@ export const ScrollIndicator = function ({ color: e = '#fff', bottom: r = 24, sc
         zIndex: 80,
         pointerEvents: 'none',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
-        gap: 3,
+        gap: 10,
+        padding: '7px 16px',
+        borderRadius: 999,
+        background: 'rgba(250,244,235,.95)',
+        border: '1.5px solid ' + e,
+        boxShadow: '0 6px 18px rgba(90,30,30,.28)',
         opacity: +!i,
         transition: 'opacity .5s ease',
       },
@@ -2803,46 +2808,46 @@ export const ScrollIndicator = function ({ color: e = '#fff', bottom: r = 24, sc
         (0, t.jsx)('style', {
           children: `
         @keyframes si-bounce {
-          0%,100% { opacity: .2; transform: translateY(0); }
-          50%     { opacity: 1;  transform: translateY(5px); }
+          0%,100% { opacity: .3; transform: translateY(0); }
+          50%     { opacity: 1;  transform: translateY(-5px); }
         }
       `,
         }),
         (0, t.jsx)('span', {
           style: {
             fontFamily: "'Plus Jakarta Sans',sans-serif",
-            fontWeight: 600,
-            fontSize: 7,
-            letterSpacing: '.28em',
+            fontWeight: 800,
+            fontSize: 13,
+            letterSpacing: '.18em',
             textTransform: 'uppercase',
             color: e,
-            textShadow: '0 1px 8px rgba(0,0,0,.7)',
+            whiteSpace: 'nowrap',
           },
-          children: 'Scroll',
+          children: 'Swipe up',
         }),
-        [0, 1, 2].map((a) =>
-          (0, t.jsx)(
-            'svg',
-            {
-              width: 14,
-              height: 8,
-              viewBox: '0 0 14 8',
-              fill: 'none',
-              style: {
-                animation: `si-bounce 1.4s ease ${(0.16 * a).toFixed(2)}s infinite`,
-                filter: 'drop-shadow(0 1px 4px rgba(0,0,0,.6))',
+        (0, t.jsx)('div', {
+          style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0 },
+          children: [0, 1].map((a) =>
+            (0, t.jsx)(
+              'svg',
+              {
+                width: 20,
+                height: 11,
+                viewBox: '0 0 14 8',
+                fill: 'none',
+                style: { animation: `si-bounce 1.3s ease ${(0.18 * a).toFixed(2)}s infinite`, marginTop: a ? -3 : 0 },
+                children: (0, t.jsx)('path', {
+                  d: 'M1 7l6-5.5L13 7',
+                  stroke: e,
+                  strokeWidth: 2.2,
+                  strokeLinecap: 'round',
+                  strokeLinejoin: 'round',
+                }),
               },
-              children: (0, t.jsx)('path', {
-                d: 'M1 1l6 5.5L13 1',
-                stroke: e,
-                strokeWidth: 1.6,
-                strokeLinecap: 'round',
-                strokeLinejoin: 'round',
-              }),
-            },
-            a,
+              a,
+            ),
           ),
-        ),
+        }),
       ],
     })
   )
