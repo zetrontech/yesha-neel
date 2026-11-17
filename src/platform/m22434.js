@@ -1554,7 +1554,7 @@ function EV({ ev: a, art: e, flip: t }) {
         (0, n.jsx)(G, { w: 15, delay: r(), gap: 2.6 }),
         (0, n.jsx)('div', {
           style: { width: 'min(100%, ' + w(78) + ')', marginTop: w(1.6) },
-          children: a.rows.map(([l, v, nm]) =>
+          children: a.rows.map(([l, v, nm, em]) =>
             (0, n.jsxs)(
               'div',
               {
@@ -1572,8 +1572,8 @@ function EV({ ev: a, art: e, flip: t }) {
                       fontFamily: j,
                     },
                     children: [
-                      (0, n.jsx)('span', { style: { fontSize: w(3.5), letterSpacing: '.05em', textTransform: 'uppercase', fontWeight: 800, color: x, textAlign: 'left' }, children: l }),
-                      (0, n.jsx)('span', { style: { fontSize: w(5), fontWeight: 700, fontStyle: 'italic', color: u, whiteSpace: 'nowrap' }, children: v }),
+                      (0, n.jsx)('span', { style: { fontSize: w(em ? 4.6 : 3.5), letterSpacing: '.05em', textTransform: 'uppercase', fontWeight: 800, color: x, textAlign: 'left' }, children: l }),
+                      (0, n.jsx)('span', { style: { fontSize: w(em ? 6.8 : 5), fontWeight: 800, fontStyle: 'italic', color: u, whiteSpace: 'nowrap' }, children: v }),
                     ],
                   }),
                   nm
@@ -1611,7 +1611,7 @@ function EV({ ev: a, art: e, flip: t }) {
                   rel: 'noopener noreferrer',
                   'aria-label': `Open ${a.title} venue on the map`,
                   style: { display: 'block', width: w(a.rows.length > 3 ? 20 : 23), height: w(a.rows.length > 3 ? 20 : 23) },
-                  children: (0, n.jsx)(QrCode, { url: a.map }),
+                  children: (0, n.jsx)(QrCode, { url: a.qrUrl || a.map }),
                 }),
                 (0, n.jsx)(B, { size: 2, track: 0.34, color: y, delay: 0, style: { animation: 'none', opacity: 1 }, children: 'Scan for location' }),
               ],
