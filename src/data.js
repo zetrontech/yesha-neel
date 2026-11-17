@@ -17,8 +17,7 @@ export const EVENTS = [
   },
   {
     id: 'manglik', title: 'Manglik Prasango', sub: '', date: 'Sunday, 29 November 2026',
-    rows: [['Mandap Muhurat', '8:00 AM'], ['Mosalu', '8:30 AM'], ['Haldi', '11:00 AM'], ['Lunch', '11:30 AM']],
-    note: 'Mosalu by Shri Hasmukhlal Mohanlal Shah (Valvodwala), Baroda',
+    rows: [['Mandap Muhurat', '8:00 AM'], ['Mosalu', '8:30 AM', 'Shri Hasmukhlal Mohanlal Shah (Valvodwala), Baroda'], ['Haldi', '11:00 AM'], ['Lunch', '11:30 AM']],
     venue: ['Avsar Party Plot'], addr: 'Near Chikhodra Crossing, Chikhodra Road, Anand – 388001', map: MAP_AVSAR, qr: true,
   },
   {
@@ -29,6 +28,6 @@ export const EVENTS = [
   {
     id: 'reception', title: 'Reception', sub: '', date: 'Monday, 30 November 2026',
     rows: [['Time', '7:00 PM onwards']],
-    venue: ["Praveg's Grand Eulogia"], addr: 'Sindhu Bhavan Road, Near Taj Skyline, Near S.G. Highway, Thaltej, Ahmedabad – 380058', map: MAP_RECEPTION, qr: false,
+    venue: ["Praveg's Grand Eulogia"], addr: 'Sindhu Bhavan Road, Near Taj Skyline, Near S.G. Highway, Thaltej, Ahmedabad – 380058', map: MAP_RECEPTION, qr: true,
   },
 ]

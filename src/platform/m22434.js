@@ -19,6 +19,7 @@ let d = 'ec7ef466-cbca-4b97-9839-642ca99c0e75',
     envelope: `${h}/envelope.webp`,
     cross: `${h}/cross.webp`,
     foil: `${h}/foil.webp`,
+    logo: `${h}/logo.png`,
     floral: `${h}/floral.webp`,
     landscape: `${h}/landscape.webp`,
   },
@@ -33,8 +34,8 @@ let d = 'ec7ef466-cbca-4b97-9839-642ca99c0e75',
     uid: `${d}-main@zetron.tech`,
   },
   u = '#4a3a2e',
-  y = '#6b5646',
-  x = '#8a3a2a',
+  y = '#4d392b',
+  x = '#7a1f24',
   b = '#a07c45',
   v = '#efe4d6',
   j = "'Cormorant Garamond', Georgia, serif",
@@ -313,13 +314,13 @@ function B({
       ...$(r),
       fontFamily: j,
       fontWeight: s,
-      fontSize: w(e),
-      letterSpacing: `${t}em`,
-      paddingLeft: `${t}em`,
+      fontSize: w(Math.max(1.3 * e, 3.4)),
+      letterSpacing: `${0.8 * t}em`,
+      paddingLeft: `${0.8 * t}em`,
       textTransform: 'uppercase',
       color: i,
       margin: 0,
-      lineHeight: 1.55,
+      lineHeight: 1.5,
       ...o,
     },
     children: a,
@@ -332,7 +333,7 @@ function H({
   step: i = 0.045,
   track: r = 0.14,
   color: s = u,
-  weight: o = 500,
+  weight: o = 600,
   caps: l = !0,
   style: c,
 }) {
@@ -376,8 +377,8 @@ function Y({ text: a, size: e = 4.6, delay: t = 0, step: i = 0.12, color: r = y,
     style: {
       fontFamily: j,
       fontStyle: 'italic',
-      fontWeight: 400,
-      fontSize: w(e),
+      fontWeight: 500,
+      fontSize: w(1.12 * e),
       color: r,
       margin: 0,
       lineHeight: 1.55,
@@ -399,14 +400,14 @@ function Y({ text: a, size: e = 4.6, delay: t = 0, step: i = 0.12, color: r = y,
       ),
   })
 }
-function X({ children: a, size: e = 8, delay: t = 0, color: i = b, style: r }) {
+function X({ children: a, size: e = 8, delay: t = 0, color: i = '#7a1f24', style: r }) {
   return (0, n.jsx)('p', {
     className: 'aa-w',
     style: {
       ...$(t),
       fontFamily: k,
       fontWeight: 400,
-      fontSize: w(e),
+      fontSize: w(1.1 * e),
       color: i,
       margin: 0,
       lineHeight: 1.28,
@@ -424,11 +425,11 @@ function O({ children: a, size: e = 4.3, delay: t = 0, color: i = y, style: r })
       ...$(t),
       fontFamily: j,
       fontStyle: 'italic',
-      fontWeight: 400,
-      fontSize: w(e),
+      fontWeight: 500,
+      fontSize: w(Math.max(1.16 * e, 4)),
       color: i,
       margin: 0,
-      lineHeight: 1.55,
+      lineHeight: 1.5,
       ...r,
     },
     children: a,
@@ -887,32 +888,17 @@ function ai({ onBegin: a, onDone: e }) {
             (0, n.jsxs)('div', {
               className: 'aa-pocket-copy',
               children: [
-                (0, n.jsxs)('p', {
+                (0, n.jsx)('img', {
+                  src: p.logo,
+                  alt: 'Y & N monogram',
                   className: 'aa-cin',
-                  style: {
-                    ...$(1.1),
-                    fontFamily: j,
-                    fontWeight: 300,
-                    fontSize: w(15),
-                    color: u,
-                    margin: 0,
-                    lineHeight: 1.05,
-                    letterSpacing: '.04em',
-                  },
-                  children: [
-                    'Y',
-                    (0, n.jsx)('span', {
-                      style: {
-                        fontStyle: 'italic',
-                        fontSize: '.5em',
-                        color: b,
-                        margin: '0 .28em',
-                        verticalAlign: '.32em',
-                      },
-                      children: '&',
-                    }),
-                    'N',
-                  ],
+                  draggable: !1,
+                  style: { ...$(1.1), width: w(34), height: 'auto', display: 'block', margin: '0 auto' },
+                }),
+                (0, n.jsx)('p', {
+                  className: 'aa-cin',
+                  style: { ...$(1.25), fontFamily: k, fontSize: w(9.6), color: '#7a1f24', margin: `${w(0.6)} 0 0`, lineHeight: 1.1, whiteSpace: 'nowrap' },
+                  children: 'Yesha & Neel',
                 }),
                 (0, n.jsx)('div', {
                   className: 'aa-cin',
@@ -921,7 +907,7 @@ function ai({ onBegin: a, onDone: e }) {
                 }),
                 (0, n.jsx)('p', {
                   className: 'aa-cin',
-                  style: { ...$(1.55), ...d(2.9, 0.34, y) },
+                  style: { ...$(1.55), ...d(3.9, 0.3, y) },
                   children: '27 – 30 November 2026',
                 }),
                 (0, n.jsx)('div', {
@@ -933,7 +919,7 @@ function ai({ onBegin: a, onDone: e }) {
                     children: [
                       (0, n.jsx)('p', {
                         className: 'aa-pulse',
-                        style: d(2.6, 0.46, x),
+                        style: d(3.5, 0.4, x),
                         children: 'Tap to open',
                       }),
                       (0, n.jsx)('div', {
@@ -960,12 +946,12 @@ function ai({ onBegin: a, onDone: e }) {
                       children: [
                         (0, n.jsx)('p', {
                           className: 'aa-cin',
-                          style: { ...$(0.8), ...d(3.1, 0.5, u) },
+                          style: { ...$(0.8), ...d(4, 0.4, u) },
                           children: 'Wedding',
                         }),
                         (0, n.jsx)('p', {
                           className: 'aa-cin',
-                          style: { ...$(0.95), ...d(3.1, 0.5, u) },
+                          style: { ...$(0.95), ...d(4, 0.4, u) },
                           children: 'Invitation',
                         }),
                       ],
@@ -1253,7 +1239,7 @@ function as({ onReveal: a }) {
         className: `aa-dateblock${o ? ' on' : ''}`,
         'aria-hidden': !o,
         children: [
-          (0, n.jsx)('p', { style: S(3.7, 0.5, u), children: 'November' }),
+          (0, n.jsx)('p', { style: S(3.8, 0.4, u), children: 'November' }),
           (0, n.jsx)('p', {
             className: 'aa-foiltext',
             style: {
@@ -1265,9 +1251,9 @@ function as({ onReveal: a }) {
             },
             children: '29',
           }),
-          (0, n.jsx)('p', { style: S(3.7, 0.5, u), children: '2026' }),
+          (0, n.jsx)('p', { style: S(3.8, 0.4, u), children: '2026' }),
           (0, n.jsx)(G, { w: 11, gap: 1.8, animate: !1 }),
-          (0, n.jsx)('p', { style: S(3, 0.42, y), children: 'Sunday · Hastmelap' }),
+          (0, n.jsx)('p', { style: S(3.9, 0.3, y), children: 'Sunday · Hastmelap' }),
           (0, n.jsx)('p', {
             style: {
               fontFamily: j,
@@ -1545,99 +1531,12 @@ let ap =
   ),
   r)
 function af({ delay: a }) {
-  let e = (e) =>
-    (0, n.jsxs)('g', {
-      transform: e ? 'translate(120 0) scale(-1 1)' : void 0,
-      children: [
-        (0, n.jsx)('path', {
-          className: 'aa-path',
-          pathLength: 1,
-          style: $(a),
-          d: 'M60 110C28 106 12 80 15 56C17 38 27 25 40 18',
-          fill: 'none',
-          stroke: b,
-          strokeWidth: '1.1',
-          strokeLinecap: 'round',
-        }),
-        ap.map((e, t) =>
-          (0, n.jsx)(
-            'g',
-            {
-              transform: `translate(${e.x} ${e.y}) rotate(${e.a})`,
-              children: (0, n.jsx)('g', {
-                className: 'aa-leaf',
-                style: $(a + 0.5 + 0.12 * t),
-                children: (0, n.jsx)('ellipse', {
-                  rx: '5.4',
-                  ry: '2.2',
-                  fill: t % 2 ? '#b9b08c' : '#cfc5a0',
-                }),
-              }),
-            },
-            t,
-          ),
-        ),
-        (0, n.jsx)('g', {
-          transform: 'translate(40 18)',
-          children: (0, n.jsxs)('g', {
-            className: 'aa-leaf',
-            style: $(a + 1.4),
-            children: [
-              (0, n.jsx)('circle', { r: '2.6', fill: '#ecc3bc' }),
-              (0, n.jsx)('circle', { r: '1', fill: b }),
-            ],
-          }),
-        }),
-      ],
-    })
-  return (0, n.jsxs)('div', {
+  return (0, n.jsx)('img', {
+    src: p.logo,
+    alt: 'Y & N monogram',
     className: 'aa-r',
-    style: { ...$(a), position: 'relative', width: w(30), height: w(30) },
-    children: [
-      (0, n.jsxs)('svg', {
-        viewBox: '0 0 120 120',
-        style: { position: 'absolute', inset: 0, width: '100%', height: '100%', overflow: 'visible' },
-        'aria-hidden': !0,
-        children: [
-          e(!1),
-          e(!0),
-          (0, n.jsx)('path', {
-            className: 'aa-path',
-            pathLength: 1,
-            style: $(a + 1.2),
-            d: 'M60 2L65 10L60 18L55 10Z',
-            fill: 'none',
-            stroke: b,
-            strokeWidth: '1.1',
-            strokeLinecap: 'round',
-          }),
-        ],
-      }),
-      (0, n.jsxs)('p', {
-        style: {
-          position: 'absolute',
-          inset: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          margin: 0,
-          paddingTop: w(2),
-          fontFamily: j,
-          fontWeight: 300,
-          fontSize: w(8.4),
-          color: u,
-          letterSpacing: '.04em',
-        },
-        children: [
-          'Y',
-          (0, n.jsx)('span', {
-            style: { fontStyle: 'italic', fontSize: '.55em', color: b, margin: '0 .22em' },
-            children: '&',
-          }),
-          'N',
-        ],
-      }),
-    ],
+    draggable: !1,
+    style: { ...$(a), width: w(44), height: 'auto', display: 'block' },
   })
 }
 export const WEDDING_ID = d
@@ -1651,30 +1550,54 @@ function EV({ ev: a, art: e, flip: t }) {
     flip: t,
     label: a.title,
     children: (0, n.jsxs)(J, {
-      top: 10,
-      bottom: 8,
+      top: 8,
+      bottom: 7,
       wash: !0,
       children: [
         (0, n.jsx)(B, { size: 2.6, track: 0.34, color: x, delay: r(), children: a.date }),
         (0, n.jsx)(X, { size: 9, delay: r(), style: { marginTop: w(1) }, children: a.title }),
         a.sub ? (0, n.jsx)(B, { size: 2.8, track: 0.5, color: y, delay: r(), children: a.sub }) : null,
         (0, n.jsx)(G, { w: 15, delay: r(), gap: 2.6 }),
-        ...a.rows.map(([l, v]) =>
-          (0, n.jsxs)(
-            'div',
-            {
-              style: { marginTop: w(1.6) },
-              children: [
-                (0, n.jsx)(B, { size: 2.2, track: 0.4, color: x, delay: r(), children: l }),
-                (0, n.jsx)(O, { size: 4.6, delay: r(), color: u, style: { lineHeight: 1.3 }, children: v }),
-              ],
-            },
-            l,
+        (0, n.jsx)('div', {
+          style: { width: 'min(100%, ' + w(78) + ')', marginTop: w(1.6) },
+          children: a.rows.map(([l, v, nm]) =>
+            (0, n.jsxs)(
+              'div',
+              {
+                children: [
+                  (0, n.jsxs)('div', {
+                    className: 'aa-r',
+                    style: {
+                      ...$(r()),
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'baseline',
+                      gap: w(3),
+                      padding: `${w(1.1)} 0`,
+                      borderBottom: '1px dotted rgba(122,31,36,.45)',
+                      fontFamily: j,
+                    },
+                    children: [
+                      (0, n.jsx)('span', { style: { fontSize: w(3.4), letterSpacing: '.14em', textTransform: 'uppercase', fontWeight: 700, color: x, textAlign: 'left' }, children: l }),
+                      (0, n.jsx)('span', { style: { fontSize: w(4.6), fontWeight: 600, fontStyle: 'italic', color: u, whiteSpace: 'nowrap' }, children: v }),
+                    ],
+                  }),
+                  nm
+                    ? (0, n.jsxs)('div', {
+                        className: 'aa-r',
+                        style: { ...$(r()), textAlign: 'center', padding: `${w(2)} 0 ${w(1)}`, fontFamily: j },
+                        children: [
+                          (0, n.jsx)('div', { style: { fontSize: w(4.6), fontWeight: 700, color: x, letterSpacing: '.04em' }, children: '– Mosalu By –' }),
+                          (0, n.jsx)('div', { style: { fontSize: w(4.4), fontWeight: 700, color: u, lineHeight: 1.3, marginTop: w(0.6) }, children: nm }),
+                        ],
+                      })
+                    : null,
+                ],
+              },
+              l,
+            ),
           ),
-        ),
-        a.note
-          ? (0, n.jsx)(O, { size: 3.2, delay: r(), style: { marginTop: w(2.2), maxWidth: w(66) }, children: a.note })
-          : null,
+        }),
         (0, n.jsx)(G, { w: 12, delay: r(), gap: 3 }),
         (0, n.jsx)(B, { size: 2.2, track: 0.42, color: x, delay: r(), children: 'Venue' }),
         ...a.venue.map((l) =>
@@ -1761,11 +1684,15 @@ export default function () {
       }
     }, [a]))
   let r = (0, s.useCallback)(() => {
+      try {
+        let a = new Audio('/audio/open.wav')
+        ;((a.volume = 1), a.play().catch(() => {}))
+      } catch {}
       document.dispatchEvent(new CustomEvent('app:ready'))
     }, []),
     d = (0, s.useCallback)(() => e(!0), [])
   return (0, n.jsx)(o.default, {
-    src: '/audio/Thousand_years_instrument.mp3',
+    src: '/audio/instrumental.mp3',
     children: (0, n.jsxs)('div', {
       className: 'aa-root',
       children: [
